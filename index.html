@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f4efe7" />
+  <title>SAFA Magnetic Bookmark</title>
+
+  <!-- Raleway dari Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__inner">
+      <div class="brand-lockup" aria-label="SAFA">
+        <img
+          class="brand-logo"
+          src="assets/branding/safa-logo.svg"
+          alt="SAFA"
+        />
+        <img
+          class="brand-tagline"
+          src="assets/branding/safa-tagline.svg"
+          alt="Little Marks, Pure Moments."
+        />
+      </div>
+      <h1>Magnetic Bookmark</h1>
+      <p class="hero__copy">
+        Bookmark mungil untuk menemani halaman favoritmu.
+      </p>
+
+      <div class="hero__meta">
+        <span>Rp9.000 / pcs</span>
+        <span>Minimal pembelian 1 pcs</span>
+      </div>
+
+      <div class="product-info">
+        <span>2,5 × 6 cm</span>
+        <span>Laminasi 2 sisi</span>
+        <span>Sudut tumpul</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="catalog-section" id="catalog">
+      <div class="section-heading">
+        <p class="eyebrow">Katalog SAFA</p>
+        <h2>Pilih desain favoritmu ✨</h2>
+      </div>
+
+      <div
+        class="series-filter"
+        id="seriesFilter"
+        aria-label="Filter series bookmark"
+      ></div>
+
+      <div id="catalogContainer" class="catalog-container"></div>
+    </section>
+
+    <section class="order-section" id="orderSection">
+      <div class="section-heading">
+        <p class="eyebrow">Ringkasan</p>
+        <h2>Pesananmu</h2>
+      </div>
+
+      <div id="orderSummary" class="order-summary"></div>
+
+      <div class="order-total">
+        <div>
+          <span>Total pesanan</span>
+          <strong id="totalItems">0 pcs</strong>
+        </div>
+        <div class="order-total__price">
+          <span>Total harga</span>
+          <strong id="totalPrice">Rp0</strong>
+        </div>
+      </div>
+
+      <div class="customer-form">
+        <div class="section-heading form-heading">
+          <p class="eyebrow">Data Pemesan</p>
+          <h2>Lengkapi datamu</h2>
+        </div>
+
+        <label for="customerName">Nama <span aria-hidden="true">*</span></label>
+        <input
+          id="customerName"
+          type="text"
+          autocomplete="name"
+          placeholder="Nama kamu"
+        />
+        <p class="field-error" id="nameError" aria-live="polite"></p>
+
+        <label for="customerNote">Catatan Pesanan</label>
+        <textarea
+          id="customerNote"
+          rows="4"
+          placeholder="Tulis catatan jika ada..."
+        ></textarea>
+        <p class="field-help">
+          Jika pesanan ingin dikirim, cantumkan alamat tujuan lengkap di kolom catatan.
+        </p>
+
+        <button id="whatsappButton" class="whatsapp-button" type="button" disabled>
+          Pesan via WhatsApp
+        </button>
+        <p class="checkout-help">
+          Kamu masih bisa mengecek pesan sebelum mengirimnya.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-cart" id="stickyCart" hidden>
+    <div class="sticky-cart__info">
+      <strong id="stickyItems">0 pcs</strong>
+      <span id="stickyPrice">Rp0</span>
+    </div>
+    <button id="viewOrderButton" type="button">Lihat Pesanan →</button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <img
+        class="footer-tagline"
+        src="assets/branding/safa-tagline-light.svg"
+        alt="Little Marks, Pure Moments."
+      />
+      <span class="footer-copy">© 2026 SAFA</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

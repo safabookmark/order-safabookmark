@@ -1,0 +1,667 @@
+/* =========================================================
+   SAFA Magnetic Bookmark
+   V4 — compact header + olive brand footer
+   ========================================================= */
+
+:root {
+  --bg: #f4efe7;
+  --surface: #fffdf9;
+  --surface-soft: #ebe4d8;
+  --text: #4d443b;
+  --muted: #6f655b;
+  --accent: #75755c;
+  --accent-dark: #5f6049;
+  --border: #dcd2c3;
+  --shadow: 0 8px 24px rgba(77, 68, 59, 0.07);
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+}
+
+/* Reset ringan */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Raleway", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================================================
+   Header
+   ========================================================= */
+
+.hero {
+  padding: 22px 18px 22px;
+}
+
+.hero__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.brand-lockup {
+  width: min(68vw, 240px);
+  margin: 0 auto 10px;
+  display: grid;
+  justify-items: center;
+  gap: 0;
+}
+
+.brand-logo {
+  width: min(100%, 158px);
+  height: auto;
+}
+
+.brand-tagline {
+  width: min(100%, 220px);
+  height: auto;
+  margin-top: -30px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(1.72rem, 7.2vw, 2.8rem);
+  line-height: 1.08;
+  font-weight: 600;
+}
+
+.hero__copy {
+  max-width: 520px;
+  margin: 14px auto 18px;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.hero__meta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.hero__meta span {
+  padding: 8px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.product-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+/* =========================================================
+   Main
+   ========================================================= */
+
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 14px 40px;
+}
+
+.catalog-section,
+.coming-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.catalog-section {
+  padding: 22px 14px 26px;
+}
+
+.section-heading {
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  margin: 0 0 3px;
+  color: var(--accent-dark);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.section-heading h2,
+.coming-section h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+/* =========================================================
+   Filter Series
+   ========================================================= */
+
+.series-filter {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 2px 0 12px;
+  margin-bottom: 12px;
+  scrollbar-width: none;
+}
+
+.series-filter::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-btn {
+  flex: 0 0 auto;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 9px 13px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* =========================================================
+   Catalog
+   ========================================================= */
+
+.catalog-container {
+  display: grid;
+  gap: 26px;
+}
+
+.series-block {
+  display: grid;
+  gap: 12px;
+}
+
+.series-title {
+  margin: 0;
+  padding-top: 4px;
+
+  /*
+    SEMENTARA pakai fallback serif.
+    The Seasons belum dipasang karena kita belum punya webfont/file font-nya.
+  */
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.42rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.product-card {
+  min-width: 0;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.product-card.is-selected {
+  border-color: var(--accent);
+}
+
+.product-image-wrap {
+  min-height: 224px;
+  display: grid;
+  place-items: center;
+  padding: 14px 8px;
+  background: var(--surface-soft);
+  border-radius: var(--radius-sm);
+}
+
+/*
+  Area desain bookmark SELALU 5:12.
+  Nanti gambar asli cukup dimasukkan ke dalam area ini.
+*/
+.product-image {
+  width: min(62%, 94px);
+  aspect-ratio: 5 / 12;
+  object-fit: contain;
+  border-radius: 3px;
+  box-shadow: 0 7px 16px rgba(77, 68, 59, 0.12);
+}
+
+.product-image-placeholder {
+  width: min(62%, 94px);
+  aspect-ratio: 5 / 12;
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  background: #d9d1c5;
+  color: var(--muted);
+  border: 1px dashed #b4a99a;
+  border-radius: 3px;
+  font-size: 0.68rem;
+  text-align: center;
+}
+
+.product-body {
+  padding-top: 10px;
+}
+
+.product-code {
+  margin: 0 0 2px;
+  color: var(--muted);
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.product-name {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.22;
+  font-weight: 600;
+}
+
+.product-price {
+  margin: 6px 0 10px;
+  font-size: 0.82rem;
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+/* Quantity */
+.quantity-control {
+  display: grid;
+  grid-template-columns: 1fr 42px 1fr;
+  align-items: center;
+  min-height: 38px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: var(--surface);
+}
+
+.qty-btn {
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.qty-btn:disabled {
+  cursor: default;
+  opacity: 0.28;
+}
+
+.qty-value {
+  display: grid;
+  place-items: center;
+  min-height: 36px;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  font-weight: 700;
+  font-size: 0.86rem;
+}
+
+/* =========================================================
+   Placeholder section
+   ========================================================= */
+
+.coming-section {
+  margin-top: 16px;
+  padding: 20px 16px;
+}
+
+.coming-section p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+.footer {
+  margin-top: 8px;
+  padding: 14px 18px 16px;
+  background: var(--accent);
+  color: #fbfbf7;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer__brand {
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+}
+
+.footer-tagline {
+  width: min(54vw, 190px);
+  height: auto;
+  display: block;
+}
+
+.footer-copy {
+  color: #fbfbf7;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  opacity: 0.82;
+}
+
+/* =========================================================
+   Tablet / Desktop
+   ========================================================= */
+
+
+@media (min-width: 620px) {
+  main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .catalog-section {
+    padding: 28px 24px 34px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .product-image-wrap {
+    min-height: 250px;
+  }
+}
+
+
+/* =========================================================
+   V2 — Accessibility/readability + cart + checkout
+   ========================================================= */
+
+/* Teks kecil dibuat sedikit lebih tegas agar nyaman dibaca lintas usia. */
+.hero__copy,
+.product-info,
+.product-code,
+.eyebrow,
+.product-price,
+.field-help,
+.checkout-help {
+  font-weight: 500;
+}
+
+.product-info {
+  font-size: 0.8rem;
+}
+
+.product-code,
+.eyebrow {
+  font-weight: 700;
+}
+
+.order-section {
+  margin-top: 16px;
+  padding: 22px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.order-summary {
+  display: grid;
+  gap: 9px;
+}
+
+.empty-order {
+  margin: 2px 0 6px;
+  padding: 14px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.summary-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.summary-item__name {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.summary-item__name strong {
+  font-size: 0.88rem;
+}
+
+.summary-item__name span,
+.summary-item__price {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.summary-item__price {
+  align-self: center;
+  font-weight: 600;
+}
+
+.order-total {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 14px;
+  background: var(--bg);
+  border-radius: var(--radius-md);
+}
+
+.order-total > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.order-total span {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 500;
+}
+
+.order-total strong {
+  font-size: 0.95rem;
+}
+
+.order-total__price {
+  text-align: right;
+}
+
+.order-total__price strong {
+  color: var(--accent-dark);
+  font-size: 1.2rem;
+}
+
+.customer-form {
+  margin-top: 28px;
+}
+
+.form-heading {
+  margin-bottom: 18px;
+}
+
+.customer-form label {
+  display: block;
+  margin: 14px 0 7px;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.customer-form input,
+.customer-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--text);
+  padding: 12px 13px;
+  outline: none;
+}
+
+.customer-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.customer-form input:focus,
+.customer-form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(117, 117, 92, 0.1);
+}
+
+.field-help,
+.checkout-help {
+  margin: 7px 2px 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.field-error {
+  min-height: 18px;
+  margin: 5px 2px 0;
+  color: #8a4e43;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.whatsapp-button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 13px 16px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.whatsapp-button:disabled {
+  background: #c7c0b5;
+  cursor: default;
+}
+
+.checkout-help {
+  text-align: center;
+}
+
+/* Sticky cart */
+.sticky-cart {
+  position: fixed;
+  z-index: 50;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 11px 10px 14px;
+  background: rgba(255, 253, 249, 0.97);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 12px 34px rgba(77, 68, 59, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+.sticky-cart[hidden] {
+  display: none;
+}
+
+.sticky-cart__info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.sticky-cart__info strong {
+  font-size: 0.82rem;
+}
+
+.sticky-cart__info span {
+  color: var(--accent-dark);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.sticky-cart button {
+  border: 0;
+  border-radius: 11px;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 13px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+body.has-sticky-cart {
+  padding-bottom: 78px;
+}
+
+@media (min-width: 620px) {
+  .order-section {
+    padding: 28px 24px;
+  }
+}
