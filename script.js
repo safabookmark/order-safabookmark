@@ -1,6 +1,6 @@
 /* =========================================================
    SAFA Magnetic Bookmark
-   V3 — Data produk + gambar asli + katalog + filter series + checkout
+   V5 — harga Rp8.000 + Haramain Series + katalog + filter series + checkout
    ========================================================= */
 
 /*
@@ -17,40 +17,46 @@
 
 const products = [
   // Qur'an Series
-  { series: "Qur'an Series", code: "QR01", name: "Tilawah", price: 9000, image: "qr01.jpg" },
-  { series: "Qur'an Series", code: "QR02", name: "Tasmi'", price: 9000, image: "qr02.jpg" },
-  { series: "Qur'an Series", code: "QR03", name: "Muraja'ah", price: 9000, image: "qr03.jpg" },
-  { series: "Qur'an Series", code: "QR04", name: "Hifzh", price: 9000, image: "qr04.jpg" },
+  { series: "Qur'an Series", code: "QR01", name: "Tilawah", price: 8000, image: "qr01.jpg" },
+  { series: "Qur'an Series", code: "QR02", name: "Tasmi'", price: 8000, image: "qr02.jpg" },
+  { series: "Qur'an Series", code: "QR03", name: "Muraja'ah", price: 8000, image: "qr03.jpg" },
+  { series: "Qur'an Series", code: "QR04", name: "Hifzh", price: 8000, image: "qr04.jpg" },
 
   // Batik Series
-  { series: "Batik Series", code: "BT01", name: "Jejak", price: 9000, image: "bt01.jpg" },
-  { series: "Batik Series", code: "BT02", name: "Sekar", price: 9000, image: "bt02.jpg" },
-  { series: "Batik Series", code: "BT03", name: "Kelopak", price: 9000, image: "bt03.jpg" },
-  { series: "Batik Series", code: "BT04", name: "Alur", price: 9000, image: "bt04.jpg" },
+  { series: "Batik Series", code: "BT01", name: "Jejak", price: 8000, image: "bt01.jpg" },
+  { series: "Batik Series", code: "BT02", name: "Sekar", price: 8000, image: "bt02.jpg" },
+  { series: "Batik Series", code: "BT03", name: "Kelopak", price: 8000, image: "bt03.jpg" },
+  { series: "Batik Series", code: "BT04", name: "Alur", price: 8000, image: "bt04.jpg" },
 
   // Arabic Quotes Series
-  { series: "Arabic Quotes Series", code: "AQ01", name: "Ilmu", price: 9000, image: "aq01.jpg" },
-  { series: "Arabic Quotes Series", code: "AQ02", name: "Indah", price: 9000, image: "aq02.jpg" },
-  { series: "Arabic Quotes Series", code: "AQ03", name: "Berkah", price: 9000, image: "aq03.jpg" },
-  { series: "Arabic Quotes Series", code: "AQ04", name: "Tenang", price: 9000, image: "aq04.jpg" },
+  { series: "Arabic Quotes Series", code: "AQ01", name: "Ilmu", price: 8000, image: "aq01.jpg" },
+  { series: "Arabic Quotes Series", code: "AQ02", name: "Indah", price: 8000, image: "aq02.jpg" },
+  { series: "Arabic Quotes Series", code: "AQ03", name: "Berkah", price: 8000, image: "aq03.jpg" },
+  { series: "Arabic Quotes Series", code: "AQ04", name: "Tenang", price: 8000, image: "aq04.jpg" },
 
   // Kids Series
-  { series: "Kids Series", code: "KD01", name: "Buah", price: 9000, image: "kd01.jpg" },
-  { series: "Kids Series", code: "KD02", name: "Bakery", price: 9000, image: "kd02.jpg" },
-  { series: "Kids Series", code: "KD03", name: "Rumah", price: 9000, image: "kd03.jpg" },
-  { series: "Kids Series", code: "KD04", name: "Pelangi", price: 9000, image: "kd04.jpg" },
+  { series: "Kids Series", code: "KD01", name: "Buah", price: 8000, image: "kd01.jpg" },
+  { series: "Kids Series", code: "KD02", name: "Bakery", price: 8000, image: "kd02.jpg" },
+  { series: "Kids Series", code: "KD03", name: "Rumah", price: 8000, image: "kd03.jpg" },
+  { series: "Kids Series", code: "KD04", name: "Pelangi", price: 8000, image: "kd04.jpg" },
 
   // Playful Series
-  { series: "Playful Series", code: "PF01", name: "Maize", price: 9000, image: "pf01.jpg" },
-  { series: "Playful Series", code: "PF02", name: "Bee", price: 9000, image: "pf02.jpg" },
-  { series: "Playful Series", code: "PF03", name: "Egg", price: 9000, image: "pf03.jpg" },
-  { series: "Playful Series", code: "PF04", name: "Bloom", price: 9000, image: "pf04.jpg" },
+  { series: "Playful Series", code: "PF01", name: "Maize", price: 8000, image: "pf01.jpg" },
+  { series: "Playful Series", code: "PF02", name: "Bee", price: 8000, image: "pf02.jpg" },
+  { series: "Playful Series", code: "PF03", name: "Egg", price: 8000, image: "pf03.jpg" },
+  { series: "Playful Series", code: "PF04", name: "Bloom", price: 8000, image: "pf04.jpg" },
 
   // Vintage Library Series
-  { series: "Vintage Library Series", code: "VL01", name: "Pustaka", price: 9000, image: "vl01.jpg" },
-  { series: "Vintage Library Series", code: "VL02", name: "Rehat", price: 9000, image: "vl02.jpg" },
-  { series: "Vintage Library Series", code: "VL03", name: "Koleksi", price: 9000, image: "vl03.jpg" },
-  { series: "Vintage Library Series", code: "VL04", name: "Arsip", price: 9000, image: "vl04.jpg" }
+  { series: "Vintage Library Series", code: "VL01", name: "Pustaka", price: 8000, image: "vl01.jpg" },
+  { series: "Vintage Library Series", code: "VL02", name: "Rehat", price: 8000, image: "vl02.jpg" },
+  { series: "Vintage Library Series", code: "VL03", name: "Koleksi", price: 8000, image: "vl03.jpg" },
+  { series: "Vintage Library Series", code: "VL04", name: "Arsip", price: 8000, image: "vl04.jpg" },
+
+  // Haramain Series
+  { series: "Haramain Series", code: "HR01", name: "Quba", price: 8000, image: "hr01.jpg" },
+  { series: "Haramain Series", code: "HR02", name: "Makkah", price: 8000, image: "hr02.jpg" },
+  { series: "Haramain Series", code: "HR03", name: "Sajadah", price: 8000, image: "hr03.jpg" },
+  { series: "Haramain Series", code: "HR04", name: "Nabawi", price: 8000, image: "hr04.jpg" }
 ];
 
 /*
