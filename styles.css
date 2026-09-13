@@ -454,7 +454,7 @@ main {
 
 @media (min-width: 620px) {
   .showcase-slide {
-    flex-basis: 88%;
+    flex-basis: 78%;
   }
 }
 
