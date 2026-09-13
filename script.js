@@ -408,9 +408,7 @@ const showcaseNext = document.querySelector(".showcase-next");
 if (
   showcaseSlider &&
   showcaseSlides.length &&
-  showcaseDots &&
-  showcasePrev &&
-  showcaseNext
+  showcaseDots
 ) {
   let activeShowcaseIndex = 0;
 
@@ -462,24 +460,12 @@ if (
     updateShowcaseDots(closestIndex);
   });
 
-  showcasePrev.addEventListener("click", () => {
-    const newIndex =
-      activeShowcaseIndex === 0
-        ? showcaseSlides.length - 1
-        : activeShowcaseIndex - 1;
-
     showcaseSlides[newIndex].scrollIntoView({
       behavior: "smooth",
       block: "nearest",
       inline: "start"
     });
   });
-
-  showcaseNext.addEventListener("click", () => {
-    const newIndex =
-      activeShowcaseIndex === showcaseSlides.length - 1
-        ? 0
-        : activeShowcaseIndex + 1;
 
     showcaseSlides[newIndex].scrollIntoView({
       behavior: "smooth",
