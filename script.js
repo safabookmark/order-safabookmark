@@ -363,7 +363,8 @@ function createWhatsAppMessage() {
     lines.push("", "Catatan:", note);
   }
 
-  lines.push("", "Terima kasih 🤍");
+  lines.push("Terima kasih 🤍");
+  lines.push("Jazakumullahu khairan");
 
   return lines.join("\n");
 }
