@@ -394,3 +394,97 @@ whatsappButton.addEventListener("click", () => {
 renderFilters();
 renderCatalog();
 updateCart();
+
+// =========================
+// SHOWCASE SLIDER
+// =========================
+
+const showcaseSlider = document.getElementById("showcaseSlider");
+const showcaseSlides = document.querySelectorAll(".showcase-slide");
+const showcaseDots = document.getElementById("showcaseDots");
+const showcasePrev = document.querySelector(".showcase-prev");
+const showcaseNext = document.querySelector(".showcase-next");
+
+if (
+  showcaseSlider &&
+  showcaseSlides.length &&
+  showcaseDots &&
+  showcasePrev &&
+  showcaseNext
+) {
+  let activeShowcaseIndex = 0;
+
+  showcaseSlides.forEach((_, index) => {
+    const dot = document.createElement("button");
+
+    dot.type = "button";
+    dot.className = "showcase-dot";
+    dot.setAttribute("aria-label", `Lihat foto ${index + 1}`);
+
+    dot.addEventListener("click", () => {
+      showcaseSlides[index].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "start"
+      });
+    });
+
+    showcaseDots.appendChild(dot);
+  });
+
+  const dots = showcaseDots.querySelectorAll(".showcase-dot");
+
+  function updateShowcaseDots(index) {
+    activeShowcaseIndex = index;
+
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("active", dotIndex === index);
+    });
+  }
+
+  updateShowcaseDots(0);
+
+  showcaseSlider.addEventListener("scroll", () => {
+    const sliderLeft = showcaseSlider.scrollLeft;
+
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+
+    showcaseSlides.forEach((slide, index) => {
+      const distance = Math.abs(slide.offsetLeft - sliderLeft);
+
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    updateShowcaseDots(closestIndex);
+  });
+
+  showcasePrev.addEventListener("click", () => {
+    const newIndex =
+      activeShowcaseIndex === 0
+        ? showcaseSlides.length - 1
+        : activeShowcaseIndex - 1;
+
+    showcaseSlides[newIndex].scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start"
+    });
+  });
+
+  showcaseNext.addEventListener("click", () => {
+    const newIndex =
+      activeShowcaseIndex === showcaseSlides.length - 1
+        ? 0
+        : activeShowcaseIndex + 1;
+
+    showcaseSlides[newIndex].scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start"
+    });
+  });
+}
