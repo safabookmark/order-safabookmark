@@ -380,7 +380,7 @@ main {
 .showcase-heading h2 {
   margin: 0;
   color: var(--text);
-  font-size: 1.35rem;
+  font-size: 1.18rem;
   font-weight: 600;
 }
 
@@ -421,29 +421,11 @@ main {
   object-fit: cover;
 }
 
-.showcase-arrow {
-  position: absolute;
-  top: 50%;
-  z-index: 2;
-  width: 36px;
-  height: 36px;
-  transform: translateY(-50%);
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  background: rgba(251, 251, 247, 0.92);
-  color: var(--text);
-  font-size: 1.6rem;
-  line-height: 1;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(77, 68, 59, 0.1);
-}
-
-.showcase-prev {
-  left: 8px;
-}
-
-.showcase-next {
-  right: 8px;
+.showcase-hint {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 500;
 }
 
 .showcase-dots {
