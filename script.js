@@ -402,14 +402,8 @@ updateCart();
 const showcaseSlider = document.getElementById("showcaseSlider");
 const showcaseSlides = document.querySelectorAll(".showcase-slide");
 const showcaseDots = document.getElementById("showcaseDots");
-const showcasePrev = document.querySelector(".showcase-prev");
-const showcaseNext = document.querySelector(".showcase-next");
 
-if (
-  showcaseSlider &&
-  showcaseSlides.length &&
-  showcaseDots
-) {
+if (showcaseSlider && showcaseSlides.length && showcaseDots) {
   let activeShowcaseIndex = 0;
 
   showcaseSlides.forEach((_, index) => {
@@ -458,19 +452,5 @@ if (
     });
 
     updateShowcaseDots(closestIndex);
-  });
-
-    showcaseSlides[newIndex].scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "start"
-    });
-  });
-
-    showcaseSlides[newIndex].scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "start"
-    });
   });
 }
