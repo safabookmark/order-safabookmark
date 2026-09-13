@@ -349,6 +349,7 @@ function createWhatsAppMessage() {
 
   const lines = [
     "Halo, saya mau pesan Magnetic Bookmark SAFA \u{1F516}",
+    "",
     `Nama: ${name}`,
     "",
     "Pesanan:",
