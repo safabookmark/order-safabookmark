@@ -360,11 +360,14 @@ function createWhatsAppMessage() {
   ];
 
   if (note) {
-    lines.push("", "Catatan:", note);
-  }
+  lines.push("");
+  lines.push("Catatan:");
+  lines.push(note);
+}
 
-  lines.push("Terima kasih 🤍");
-  lines.push("Jazakumullahu khairan");
+lines.push("");
+lines.push("Terima kasih 🤍");
+lines.push("Jazakumullahu khairan");
 
   return lines.join("\n");
 }
