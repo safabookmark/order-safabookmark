@@ -444,6 +444,26 @@ main {
   font-weight: 700;
 }
 
+.handmade-note {
+  margin-top: 16px;
+  padding: 18px 16px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.handmade-note .eyebrow {
+  margin-bottom: 7px;
+}
+
+.handmade-note p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.65;
+  font-weight: 500;
+}
+
 .order-section {
   margin-top: 16px;
   padding: 22px 16px;
