@@ -348,7 +348,7 @@ function createWhatsAppMessage() {
   );
 
   const lines = [
-    "Halo, saya mau pesan Magnetic Bookmark SAFA \u2728",
+    "Halo, saya mau pesan Magnetic Bookmark SAFA 🔖",
     "",
     `Nama: ${name}`,
     "",
@@ -366,7 +366,7 @@ function createWhatsAppMessage() {
 }
 
 lines.push("");
-lines.push("Terima kasih \u{1F90D}");
+lines.push("Terima kasih 🤍");
 lines.push("Jazakumullahu khairan");
 
   return lines.join("\n");
