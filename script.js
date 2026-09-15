@@ -10,6 +10,8 @@
   - name   : nama desain
   - price  : harga dalam angka, tanpa titik
   - image  : nama file gambar dalam folder assets/products/
+  - stock  : jumlah stok ready saat ini
+             Jika pesanan melebihi stock, sisanya otomatis dihitung sebagai PO.
 
   Contoh gambar:
   assets/products/qr01.jpg
@@ -17,46 +19,46 @@
 
 const products = [
   // Qur'an Series
-  { series: "Qur'an Series", code: "QR01", name: "Tilawah", price: 8000, image: "qr01.jpg" },
-  { series: "Qur'an Series", code: "QR02", name: "Tasmi'", price: 8000, image: "qr02.jpg" },
-  { series: "Qur'an Series", code: "QR03", name: "Muraja'ah", price: 8000, image: "qr03.jpg" },
-  { series: "Qur'an Series", code: "QR04", name: "Hifzh", price: 8000, image: "qr04.jpg" },
+  { series: "Qur'an Series", code: "QR01", name: "Tilawah", price: 8000, image: "qr01.jpg", stock: 0 },
+  { series: "Qur'an Series", code: "QR02", name: "Tasmi'", price: 8000, image: "qr02.jpg", stock: 1 },
+  { series: "Qur'an Series", code: "QR03", name: "Muraja'ah", price: 8000, image: "qr03.jpg", stock: 1 },
+  { series: "Qur'an Series", code: "QR04", name: "Hifzh", price: 8000, image: "qr04.jpg", stock: 2 },
 
   // Batik Series
-  { series: "Batik Series", code: "BT01", name: "Jejak", price: 8000, image: "bt01.jpg" },
-  { series: "Batik Series", code: "BT02", name: "Sekar", price: 8000, image: "bt02.jpg" },
-  { series: "Batik Series", code: "BT03", name: "Kelopak", price: 8000, image: "bt03.jpg" },
-  { series: "Batik Series", code: "BT04", name: "Alur", price: 8000, image: "bt04.jpg" },
+  { series: "Batik Series", code: "BT01", name: "Jejak", price: 8000, image: "bt01.jpg", stock: 2 },
+  { series: "Batik Series", code: "BT02", name: "Sekar", price: 8000, image: "bt02.jpg", stock: 2 },
+  { series: "Batik Series", code: "BT03", name: "Kelopak", price: 8000, image: "bt03.jpg", stock: 2 },
+  { series: "Batik Series", code: "BT04", name: "Alur", price: 8000, image: "bt04.jpg", stock: 2 },
 
   // Arabic Quotes Series
-  { series: "Arabic Quotes Series", code: "AQ01", name: "Ilmu", price: 8000, image: "aq01.jpg" },
-  { series: "Arabic Quotes Series", code: "AQ02", name: "Indah", price: 8000, image: "aq02.jpg" },
-  { series: "Arabic Quotes Series", code: "AQ03", name: "Berkah", price: 8000, image: "aq03.jpg" },
-  { series: "Arabic Quotes Series", code: "AQ04", name: "Tenang", price: 8000, image: "aq04.jpg" },
+  { series: "Arabic Quotes Series", code: "AQ01", name: "Ilmu", price: 8000, image: "aq01.jpg", stock: 1 },
+  { series: "Arabic Quotes Series", code: "AQ02", name: "Indah", price: 8000, image: "aq02.jpg", stock: 2 },
+  { series: "Arabic Quotes Series", code: "AQ03", name: "Berkah", price: 8000, image: "aq03.jpg", stock: 2 },
+  { series: "Arabic Quotes Series", code: "AQ04", name: "Tenang", price: 8000, image: "aq04.jpg", stock: 1 },
 
   // Kids Series
-  { series: "Kids Series", code: "KD01", name: "Buah", price: 8000, image: "kd01.jpg" },
-  { series: "Kids Series", code: "KD02", name: "Bakery", price: 8000, image: "kd02.jpg" },
-  { series: "Kids Series", code: "KD03", name: "Rumah", price: 8000, image: "kd03.jpg" },
-  { series: "Kids Series", code: "KD04", name: "Pelangi", price: 8000, image: "kd04.jpg" },
+  { series: "Kids Series", code: "KD01", name: "Buah", price: 8000, image: "kd01.jpg", stock: 2 },
+  { series: "Kids Series", code: "KD02", name: "Bakery", price: 8000, image: "kd02.jpg", stock: 2 },
+  { series: "Kids Series", code: "KD03", name: "Rumah", price: 8000, image: "kd03.jpg", stock: 2 },
+  { series: "Kids Series", code: "KD04", name: "Pelangi", price: 8000, image: "kd04.jpg", stock: 1 },
 
   // Playful Series
-  { series: "Playful Series", code: "PF01", name: "Maize", price: 8000, image: "pf01.jpg" },
-  { series: "Playful Series", code: "PF02", name: "Bee", price: 8000, image: "pf02.jpg" },
-  { series: "Playful Series", code: "PF03", name: "Egg", price: 8000, image: "pf03.jpg" },
-  { series: "Playful Series", code: "PF04", name: "Bloom", price: 8000, image: "pf04.jpg" },
+  { series: "Playful Series", code: "PF01", name: "Maize", price: 8000, image: "pf01.jpg", stock: 2 },
+  { series: "Playful Series", code: "PF02", name: "Bee", price: 8000, image: "pf02.jpg", stock: 2 },
+  { series: "Playful Series", code: "PF03", name: "Egg", price: 8000, image: "pf03.jpg", stock: 2 },
+  { series: "Playful Series", code: "PF04", name: "Bloom", price: 8000, image: "pf04.jpg", stock: 2 },
 
   // Vintage Library Series
-  { series: "Vintage Library Series", code: "VL01", name: "Pustaka", price: 8000, image: "vl01.jpg" },
-  { series: "Vintage Library Series", code: "VL02", name: "Rehat", price: 8000, image: "vl02.jpg" },
-  { series: "Vintage Library Series", code: "VL03", name: "Koleksi", price: 8000, image: "vl03.jpg" },
-  { series: "Vintage Library Series", code: "VL04", name: "Arsip", price: 8000, image: "vl04.jpg" },
+  { series: "Vintage Library Series", code: "VL01", name: "Pustaka", price: 8000, image: "vl01.jpg", stock: 2 },
+  { series: "Vintage Library Series", code: "VL02", name: "Rehat", price: 8000, image: "vl02.jpg", stock: 2 },
+  { series: "Vintage Library Series", code: "VL03", name: "Koleksi", price: 8000, image: "vl03.jpg", stock: 2 },
+  { series: "Vintage Library Series", code: "VL04", name: "Arsip", price: 8000, image: "vl04.jpg", stock: 3 },
 
   // Haramain Series
-  { series: "Haramain Series", code: "HR01", name: "Quba", price: 8000, image: "hr01.jpg" },
-  { series: "Haramain Series", code: "HR02", name: "Makkah", price: 8000, image: "hr02.jpg" },
-  { series: "Haramain Series", code: "HR03", name: "Sajadah", price: 8000, image: "hr03.jpg" },
-  { series: "Haramain Series", code: "HR04", name: "Nabawi", price: 8000, image: "hr04.jpg" }
+  { series: "Haramain Series", code: "HR01", name: "Quba", price: 8000, image: "hr01.jpg", stock: 2 },
+  { series: "Haramain Series", code: "HR02", name: "Makkah", price: 8000, image: "hr02.jpg", stock: 1 },
+  { series: "Haramain Series", code: "HR03", name: "Sajadah", price: 8000, image: "hr03.jpg", stock: 3 },
+  { series: "Haramain Series", code: "HR04", name: "Nabawi", price: 8000, image: "hr04.jpg", stock: 2 }
 ];
 
 /*
@@ -121,6 +123,16 @@ function renderFilters() {
 function createProductCard(product) {
   const qty = quantities[product.code];
   const selectedClass = qty > 0 ? "is-selected" : "";
+  const readyQty = Math.min(qty, product.stock);
+  const poQty = Math.max(qty - product.stock, 0);
+
+  let stockMarkup = `<span class="product-stock">Ready ${product.stock} pcs</span>`;
+
+  if (product.stock === 0) {
+    stockMarkup = `<span class="product-stock is-po">Pre-order</span>`;
+  } else if (poQty > 0) {
+    stockMarkup = `<span class="product-stock is-po">${readyQty} ready • ${poQty} pre-order</span>`;
+  }
 
   const imageMarkup = product.image
     ? `
@@ -146,6 +158,7 @@ function createProductCard(product) {
         <p class="product-code">${product.code}</p>
         <h3 class="product-name">${product.name}</h3>
         <p class="product-price">${formatRupiah(product.price)}</p>
+        ${stockMarkup}
 
         <div class="quantity-control" aria-label="Jumlah ${product.name}">
           <button
@@ -302,6 +315,15 @@ function updateCart() {
             <div class="summary-item__name">
               <strong>${product.code} — ${product.name}</strong>
               <span>${product.quantity} × ${formatRupiah(product.price)}</span>
+              ${
+                product.quantity > product.stock
+                  ? `<span class="summary-stock">${
+                      product.stock > 0
+                        ? `${product.stock} ready + ${product.quantity - product.stock} PO`
+                        : `${product.quantity} PO`
+                    }</span>`
+                  : ""
+              }
             </div>
             <span class="summary-item__price">
               ${formatRupiah(product.price * product.quantity)}
@@ -343,9 +365,20 @@ function createWhatsAppMessage() {
   const name = customerName.value.trim();
   const note = customerNote.value.trim();
 
-  const orderLines = selected.map(
-    (product) => `• ${product.code} — ${product.name} × ${product.quantity}`
-  );
+  const orderLines = selected.map((product) => {
+    const readyQty = Math.min(product.quantity, product.stock);
+    const poQty = Math.max(product.quantity - product.stock, 0);
+
+    let stockInfo = "";
+
+    if (poQty > 0 && readyQty > 0) {
+      stockInfo = ` (${readyQty} ready + ${poQty} PO)`;
+    } else if (poQty > 0) {
+      stockInfo = ` (${poQty} PO)`;
+    }
+
+    return `• ${product.code} — ${product.name} × ${product.quantity}${stockInfo}`;
+  });
 
   const lines = [
     "Halo, saya mau pesan Magnetic Bookmark SAFA \u{1F516}",

@@ -783,3 +783,54 @@ body.has-sticky-cart {
     padding: 28px 24px;
   }
 }
+
+
+/* =========================================================
+   Stock Ready + Pre-order
+   ========================================================= */
+
+.product-stock {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 24px;
+  margin: 0 0 10px;
+  padding: 4px 8px;
+  background: rgba(117, 117, 92, 0.09);
+  border: 1px solid rgba(117, 117, 92, 0.28);
+  border-radius: 999px;
+  color: var(--accent-dark);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.product-stock.is-po {
+  background: #f4ece7;
+  border-color: #d9bfb2;
+  color: #8a5848;
+}
+
+.summary-stock {
+  color: #8a5848 !important;
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+}
+
+/* Keterangan sistem stok/PO di area katalog */
+.po-info {
+  margin: 2px 0 20px;
+  padding: 12px 14px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.po-info strong {
+  color: var(--text);
+  font-weight: 700;
+}
