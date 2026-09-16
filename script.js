@@ -20,9 +20,9 @@
 const products = [
   // Qur'an Series
   { series: "Qur'an Series", code: "QR01", name: "Tilawah", price: 8000, image: "qr01.jpg", stock: 0 },
-  { series: "Qur'an Series", code: "QR02", name: "Tasmi'", price: 8000, image: "qr02.jpg", stock: 1 },
-  { series: "Qur'an Series", code: "QR03", name: "Muraja'ah", price: 8000, image: "qr03.jpg", stock: 1 },
-  { series: "Qur'an Series", code: "QR04", name: "Hifzh", price: 8000, image: "qr04.jpg", stock: 2 },
+  { series: "Qur'an Series", code: "QR02", name: "Tasmi'", price: 8000, image: "qr02.jpg", stock: 0 },
+  { series: "Qur'an Series", code: "QR03", name: "Muraja'ah", price: 8000, image: "qr03.jpg", stock: 0 },
+  { series: "Qur'an Series", code: "QR04", name: "Hifzh", price: 8000, image: "qr04.jpg", stock: 1 },
 
   // Batik Series
   { series: "Batik Series", code: "BT01", name: "Jejak", price: 8000, image: "bt01.jpg", stock: 2 },
@@ -31,10 +31,10 @@ const products = [
   { series: "Batik Series", code: "BT04", name: "Alur", price: 8000, image: "bt04.jpg", stock: 2 },
 
   // Arabic Quotes Series
-  { series: "Arabic Quotes Series", code: "AQ01", name: "Ilmu", price: 8000, image: "aq01.jpg", stock: 1 },
+  { series: "Arabic Quotes Series", code: "AQ01", name: "Ilmu", price: 8000, image: "aq01.jpg", stock: 0 },
   { series: "Arabic Quotes Series", code: "AQ02", name: "Indah", price: 8000, image: "aq02.jpg", stock: 2 },
   { series: "Arabic Quotes Series", code: "AQ03", name: "Berkah", price: 8000, image: "aq03.jpg", stock: 2 },
-  { series: "Arabic Quotes Series", code: "AQ04", name: "Tenang", price: 8000, image: "aq04.jpg", stock: 1 },
+  { series: "Arabic Quotes Series", code: "AQ04", name: "Tenang", price: 8000, image: "aq04.jpg", stock: 0 },
 
   // Kids Series
   { series: "Kids Series", code: "KD01", name: "Buah", price: 8000, image: "kd01.jpg", stock: 2 },
@@ -43,16 +43,16 @@ const products = [
   { series: "Kids Series", code: "KD04", name: "Pelangi", price: 8000, image: "kd04.jpg", stock: 1 },
 
   // Playful Series
-  { series: "Playful Series", code: "PF01", name: "Maize", price: 8000, image: "pf01.jpg", stock: 2 },
-  { series: "Playful Series", code: "PF02", name: "Bee", price: 8000, image: "pf02.jpg", stock: 2 },
-  { series: "Playful Series", code: "PF03", name: "Egg", price: 8000, image: "pf03.jpg", stock: 2 },
-  { series: "Playful Series", code: "PF04", name: "Bloom", price: 8000, image: "pf04.jpg", stock: 2 },
+  { series: "Playful Series", code: "PF01", name: "Maize", price: 8000, image: "pf01.jpg", stock: 1 },
+  { series: "Playful Series", code: "PF02", name: "Bee", price: 8000, image: "pf02.jpg", stock: 1 },
+  { series: "Playful Series", code: "PF03", name: "Egg", price: 8000, image: "pf03.jpg", stock: 1 },
+  { series: "Playful Series", code: "PF04", name: "Bloom", price: 8000, image: "pf04.jpg", stock: 1 },
 
   // Vintage Library Series
-  { series: "Vintage Library Series", code: "VL01", name: "Pustaka", price: 8000, image: "vl01.jpg", stock: 2 },
+  { series: "Vintage Library Series", code: "VL01", name: "Pustaka", price: 8000, image: "vl01.jpg", stock: 1 },
   { series: "Vintage Library Series", code: "VL02", name: "Rehat", price: 8000, image: "vl02.jpg", stock: 2 },
   { series: "Vintage Library Series", code: "VL03", name: "Koleksi", price: 8000, image: "vl03.jpg", stock: 2 },
-  { series: "Vintage Library Series", code: "VL04", name: "Arsip", price: 8000, image: "vl04.jpg", stock: 3 },
+  { series: "Vintage Library Series", code: "VL04", name: "Arsip", price: 8000, image: "vl04.jpg", stock: 2 },
 
   // Haramain Series
   { series: "Haramain Series", code: "HR01", name: "Quba", price: 8000, image: "hr01.jpg", stock: 2 },
