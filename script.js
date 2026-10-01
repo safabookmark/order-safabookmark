@@ -31,14 +31,14 @@ const products = [
   { series: "Batik Series", code: "BT04", name: "Alur", price: 8000, image: "bt04.jpg", stock: 2 },
 
   // Arabic Quotes Series
-  { series: "Arabic Quotes Series", code: "AQ01", name: "Ilmu", price: 8000, image: "aq01.jpg", stock: 5 },
+  { series: "Arabic Quotes Series", code: "AQ01", name: "Ilmu", price: 8000, image: "aq01.jpg", stock: 4 },
   { series: "Arabic Quotes Series", code: "AQ02", name: "Indah", price: 8000, image: "aq02.jpg", stock: 3 },
   { series: "Arabic Quotes Series", code: "AQ03", name: "Berkah", price: 8000, image: "aq03.jpg", stock: 3 },
   { series: "Arabic Quotes Series", code: "AQ04", name: "Tenang", price: 8000, image: "aq04.jpg", stock: 5 },
 
   // Kids Series
   { series: "Kids Series", code: "KD01", name: "Buah", price: 8000, image: "kd01.jpg", stock: 2 },
-  { series: "Kids Series", code: "KD02", name: "Bakery", price: 8000, image: "kd02.jpg", stock: 3 },
+  { series: "Kids Series", code: "KD02", name: "Bakery", price: 8000, image: "kd02.jpg", stock: 2 },
   { series: "Kids Series", code: "KD03", name: "Rumah", price: 8000, image: "kd03.jpg", stock: 3 },
   { series: "Kids Series", code: "KD04", name: "Pelangi", price: 8000, image: "kd04.jpg", stock: 2 },
 
@@ -49,7 +49,7 @@ const products = [
   { series: "Playful Series", code: "PF04", name: "Bloom", price: 8000, image: "pf04.jpg", stock: 3 },
 
   // Vintage Library Series
-  { series: "Vintage Library Series", code: "VL01", name: "Pustaka", price: 8000, image: "vl01.jpg", stock: 5 },
+  { series: "Vintage Library Series", code: "VL01", name: "Pustaka", price: 8000, image: "vl01.jpg", stock: 4 },
   { series: "Vintage Library Series", code: "VL02", name: "Rehat", price: 8000, image: "vl02.jpg", stock: 3 },
   { series: "Vintage Library Series", code: "VL03", name: "Koleksi", price: 8000, image: "vl03.jpg", stock: 3 },
   { series: "Vintage Library Series", code: "VL04", name: "Arsip", price: 8000, image: "vl04.jpg", stock: 4 },
@@ -57,7 +57,7 @@ const products = [
   // Haramain Series
   { series: "Haramain Series", code: "HR01", name: "Quba", price: 8000, image: "hr01.jpg", stock: 2 },
   { series: "Haramain Series", code: "HR02", name: "Makkah", price: 8000, image: "hr02.jpg", stock: 2 },
-  { series: "Haramain Series", code: "HR03", name: "Sajadah", price: 8000, image: "hr03.jpg", stock: 3 },
+  { series: "Haramain Series", code: "HR03", name: "Sajadah", price: 8000, image: "hr03.jpg", stock: 0 },
   { series: "Haramain Series", code: "HR04", name: "Nabawi", price: 8000, image: "hr04.jpg", stock: 2 }
 ];
 
